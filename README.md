@@ -6,7 +6,7 @@ The project contains two scripts:
 - A GroundScript class that generates random terrains for the character to walk on
 
 The CharacterController class contains the following key functions/coroutines:
-- BezierCoroutine, for smoothly moving the back leg in a bezier curve over time for a single step.
+- BezierCoroutine, for smoothly moving the back leg forwards in a bezier curve over time for a single step.
 - TorsoCorutine, for a natural movement of the torso when taking a step.
 - ArmCoroutine, for a natural swing of the arms using a cosine wave.
-- HandleInput function, that takes user input to move the character either forwards or backwards.
+- HandleInput function, that takes user input to move the character either forwards or backwards. As soon as the step is taken, raycasting offset horizontally by a certain distance from the character is used to determine the position for the next step.
